@@ -1,0 +1,19 @@
+{
+  "name": "practica_despliegue_1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+ "scripts": {
+  "doc": "jsdoc src/ -d docs_html"
+},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "jsdoc": "^4.0.5"
+  }
+}
