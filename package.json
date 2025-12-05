@@ -6,14 +6,15 @@
   "directories": {
     "doc": "docs"
   },
- "scripts": {
-  "doc": "jsdoc src/ -d docs_html"
-},
+  "scripts": {
+    "doc": "jsdoc src/ -d docs_html"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
-    "jsdoc": "^4.0.5"
+    "jsdoc": "^4.0.5",
+    "jsdoc-to-markdown": "^9.1.3"
   }
 }

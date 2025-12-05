@@ -23,9 +23,23 @@ jobs:
       - name: Instalar dependencias
         run: npm install
 
-      - name: Generar documentación
+      # PASO DE LA PARTE 2 (WEB HTML)
+      - name: Generar documentación HTML
         run: npm run doc
 
+      # --- NUEVO: PASO DE LA PARTE 3 (MARKDOWN) ---
+      - name: Generar documentación Markdown
+        # Usamos npx para ejecutar la herramienta que instalaste en el Paso 1
+        run: npx jsdoc2md src/*.js > documentacion_extra.md
+
+      # --- NUEVO: SUBIR EL ARCHIVO COMO DESCARGABLE ---
+      - name: Subir Markdown como Artefacto
+        uses: actions/upload-artifact@v4
+        with:
+          name: documentacion-en-markdown
+          path: documentacion_extra.md
+
+      # PASO FINAL: PUBLICAR LA WEB
       - name: Publicar en GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
